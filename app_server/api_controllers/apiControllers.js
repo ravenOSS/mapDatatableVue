@@ -37,7 +37,21 @@ const locationsDataCtrlr = (req, res) => {
     });
 };
 
+const vueDataCtrlr = (req, res) => {
+  GeoLocation.find()
+    .sort({ branchNumber: 'ascending' })
+    .select({_id: 0})
+    .exec(function (err, locations) {
+      if (err) {
+        console.log(err);
+      }
+      console.log(`These are our locations ${locations}`);
+      res.json(locations);
+    });
+};
+
 module.exports = {
   geopostCtrlr,
-  locationsDataCtrlr
+  locationsDataCtrlr,
+  vueDataCtrlr
 };

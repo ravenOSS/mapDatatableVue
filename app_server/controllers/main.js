@@ -18,7 +18,7 @@ const BSTableCtrlr = (req, res, next) => {
 };
 
 const branchmapCtrlr = (req, res) => {
-  res.render('locations-map', { title: 'Leaflet Map - Raster Graphics / Mongo Data' });
+  res.render('locationsMapbox', { title: 'Mapbox Map - Vector Graphics / Mongo Data' });
 };
 
 const geoPostCtrlr = (req, res, next) => {
@@ -63,7 +63,6 @@ module.exports = {
   homepageCtrlr,
   geoprofileCtrlr,
   BSTableCtrlr,
-  dataTableCtrlr,
   geoPostCtrlr,
   dataCtrlr,
   branchmapCtrlr

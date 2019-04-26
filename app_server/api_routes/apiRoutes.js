@@ -9,4 +9,7 @@ router.post('/geoProfile', apiController.geopostCtrlr);
 /* GET locations data. Source for populating /location-map */
 router.get('/locations', apiController.locationsDataCtrlr);
 
+/* GET locations data. Source for populating /location-map */
+router.get('/vueData', apiController.vueDataCtrlr);
+
 module.exports = router;

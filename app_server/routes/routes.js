@@ -16,8 +16,10 @@ router.get('/locationsBSTable', ctrlr.BSTableCtrlr);
 /* GET Locations Map. Display leaflet with stored data */
 router.get('/branch-map', ctrlr.branchmapCtrlr);
 
+/* GET Locations Map. Display leaflet with stored data */
+router.get('/vueMap', ctrlr.branchmapCtrlr);
+
 /* POST location data */
 router.post('/geoProfile', ctrlr.geoPostCtrlr);
-
 
 module.exports = router;
